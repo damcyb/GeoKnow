@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">GeoKnow</string>
+    <string name="error_message">An error occured while loading data.</string>
 </resources>
