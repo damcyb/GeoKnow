@@ -2,17 +2,25 @@ package com.example.geoknow.ViewModel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.geoknow.Model.CountriesService
-import com.example.geoknow.Model.Country
+import com.example.geoknow.DI.DaggerApiComponent
+import com.example.geoknow.Model.Logic.CountriesService
+import com.example.geoknow.Model.Data.Country
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.observers.DisposableSingleObserver
 import io.reactivex.schedulers.Schedulers
+import javax.inject.Inject
 
 class CountriesViewModel: ViewModel() {
 
-    private val countriesService = CountriesService()
+    //private val countriesService = CountriesService()
+    @Inject
+    lateinit var countriesService: CountriesService
     private val disposable = CompositeDisposable()
+
+    init {
+        DaggerApiComponent.create().inject(this)
+    }
 
     val countryList = MutableLiveData<List<Country>>()
     val loading = MutableLiveData<Boolean>()

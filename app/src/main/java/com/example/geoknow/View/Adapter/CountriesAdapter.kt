@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.geoknow.Model.Country
+import com.example.geoknow.Model.Data.Country
 import com.example.geoknow.R
 import com.example.geoknow.Util.getProgressDrawable
 import com.example.geoknow.Util.loadImage

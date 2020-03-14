@@ -1,4 +1,4 @@
-package com.example.geoknow.Model
+package com.example.geoknow.Model.Data
 
 import com.google.gson.annotations.SerializedName
 

@@ -1,5 +1,6 @@
-package com.example.geoknow.Model
+package com.example.geoknow.Model.Logic
 
+import com.example.geoknow.Model.Data.Country
 import io.reactivex.Single
 import retrofit2.http.GET
 
