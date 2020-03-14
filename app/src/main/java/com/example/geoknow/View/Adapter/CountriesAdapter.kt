@@ -6,6 +6,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.geoknow.Model.Country
 import com.example.geoknow.R
+import com.example.geoknow.Util.getProgressDrawable
+import com.example.geoknow.Util.loadImage
 import kotlinx.android.synthetic.main.item_country.view.*
 
 class CountriesAdapter(private var countries: ArrayList<Country>): RecyclerView.Adapter<CountriesAdapter.CountryViewHolder>() {
@@ -28,10 +30,15 @@ class CountriesAdapter(private var countries: ArrayList<Country>): RecyclerView.
 
     inner class CountryViewHolder(view: View): RecyclerView.ViewHolder(view) {
 
-        val name = view.name
+        private val name = view.countryNameTxt
+        private val capital = view.capitalNameTxt
+        private val flageImageView = view.flagImageView
+        private val progressDrawable = getProgressDrawable(view.context)
 
         fun bind(country: Country) {
             name.text = country.name
+            capital.text = country.capital
+            flageImageView.loadImage(country.flag, progressDrawable)
         }
     }
 }

@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">GeoKnow</string>
     <string name="error_message">An error occured while loading data.</string>
+    <string name="country_name">CountryName</string>
+    <string name="capital">Capital</string>
+    <string name="flag_png_desc">flagPNG</string>
 </resources>
