@@ -13,7 +13,6 @@ import javax.inject.Inject
 
 class CountriesViewModel: ViewModel() {
 
-    //private val countriesService = CountriesService()
     @Inject
     lateinit var countriesService: CountriesService
     private val disposable = CompositeDisposable()
